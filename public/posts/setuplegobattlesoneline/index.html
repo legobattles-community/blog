@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>How to Setup Lego Battles Online | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Hello I&rsquo;m lnee I have been doing some cursed stuff in with Linux, web hosting, and in this case Lego battles.
+Prerequisites
+
+A computer with Ubuntu server install on it.
+Docker to be installed on that server.
+
+      Note I use the docker deb not the snap I have not tested if the snap work
+
+Access to your router console and the ability to forward port 443
+
+Step 1 install Kasm docker
+Kasm docker is a package of Kasm web that makes think so much easier. Kasm docker GitHub page You can find more info there about setup.">
+    <meta name="generator" content="Hugo 0.151.0">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/setuplegobattlesoneline/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/setuplegobattlesoneline/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="How to Setup Lego Battles Online">
+  <meta property="og:description" content="Hello I’m lnee I have been doing some cursed stuff in with Linux, web hosting, and in this case Lego battles.
+Prerequisites A computer with Ubuntu server install on it. Docker to be installed on that server. Note I use the docker deb not the snap I have not tested if the snap work Access to your router console and the ability to forward port 443 Step 1 install Kasm docker Kasm docker is a package of Kasm web that makes think so much easier. Kasm docker GitHub page You can find more info there about setup.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-30T14:37:53-04:00">
+    <meta property="article:modified_time" content="2024-05-30T14:37:53-04:00">
+
+  <meta itemprop="name" content="How to Setup Lego Battles Online">
+  <meta itemprop="description" content="Hello I’m lnee I have been doing some cursed stuff in with Linux, web hosting, and in this case Lego battles.
+Prerequisites A computer with Ubuntu server install on it. Docker to be installed on that server. Note I use the docker deb not the snap I have not tested if the snap work Access to your router console and the ability to forward port 443 Step 1 install Kasm docker Kasm docker is a package of Kasm web that makes think so much easier. Kasm docker GitHub page You can find more info there about setup.">
+  <meta itemprop="datePublished" content="2024-05-30T14:37:53-04:00">
+  <meta itemprop="dateModified" content="2024-05-30T14:37:53-04:00">
+  <meta itemprop="wordCount" content="307">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Setup Lego Battles Online">
+  <meta name="twitter:description" content="Hello I’m lnee I have been doing some cursed stuff in with Linux, web hosting, and in this case Lego battles.
+Prerequisites A computer with Ubuntu server install on it. Docker to be installed on that server. Note I use the docker deb not the snap I have not tested if the snap work Access to your router console and the ability to forward port 443 Step 1 install Kasm docker Kasm docker is a package of Kasm web that makes think so much easier. Kasm docker GitHub page You can find more info there about setup.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">How to Setup Lego Battles Online</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-05-30T14:37:53-04:00">May 30, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Hello I&rsquo;m lnee I have been doing some cursed stuff in with Linux, web hosting, and in this case Lego battles.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A computer with Ubuntu server install on it.</li>
+<li>Docker to be installed on that server.</li>
+</ul>
+<h5 id="note-i-use-the-docker-deb-not-the-snap-i-have-not-tested-if-the-snap-work">      <em>Note I use the docker deb not the snap I have not tested if the snap work</em></h5>
+<ul>
+<li>Access to your router console and the ability to forward port 443</li>
+</ul>
+<h2 id="step-1-install-kasm-docker">Step 1 install Kasm docker</h2>
+<p>Kasm docker is a package of Kasm web that makes think so much easier. <a href="https://github.com/linuxserver/docker-kasm">Kasm docker GitHub page</a> You can find more info there about setup.</p>
+<p>To install Kasm docker, run on the server</p>
+<pre tabindex="0"><code>docker run -d \
+  --name=kasm \
+  --privileged \
+  -e KASM_PORT=443 \
+  -p 3000:3000 \
+  -p 443:443 \
+  -v /opt/kasm/data:/opt \
+  -v /opt/kasm/profiles:/profiles `#optional` \
+  -v /dev/input:/dev/input `#optional` \
+  -v /run/udev/data:/run/udev/data `#optional` \
+  --restart unless-stopped \
+  lscr.io/linuxserver/kasm:latest
+</code></pre><h2 id="setup-kasm-docker">Setup kasm docker</h2>
+<ol>
+<li>
+<p>We need to find the local IP for your server. <a href="https://linuxize.com/post/how-to-find-ip-address-linux/">Here is how.</a>.</p>
+</li>
+<li>
+<p>Once you found your server&rsquo;s IP in a web browser go to https://<code>your_ip</code>:3000/</p>
+</li>
+<li>
+<p>Then in the setup ui select <code>ubuntu24.04 openbox</code> and do what it says including entering your password in</p>
+</li>
+<li>
+<p>Forward your server&rsquo;s port 443 in your router console</p>
+</li>
+<li>
+<p>Go to https://<code>your_ip</code>:443/ and login as <code>admin@kasm.local</code></p>
+</li>
+</ol>
+<h2 id="set-up-the-container">Set up the container</h2>
+<ol>
+<li>In the top left there is a <code>workspaces</code> button, click it
+<img src="https://lneeweb.duckdns.org/images/1.png" alt="1.png"></li>
+<li>Click on <code>ubuntu24.04 openbox</code>
+<img src="https://lneeweb.duckdns.org/images/2.png" alt="2.png"></li>
+<li>Click on launch session
+<img src="https://lneeweb.duckdns.org/images/3.png" alt="3.png"></li>
+<li>Once the session launches in the sidebar, put this text in the clipboard <code>eval &quot;$(curl -s &quot;https://raw.githubusercontent.com/lnee94/resh/main/l/bsscript&quot;)&quot;</code>
+<img src="https://lneeweb.duckdns.org/images/4.png" alt="1.png"></li>
+<li>Right-click on the desktop and click on open terminal.
+<img src="https://lneeweb.duckdns.org/images/5.png" alt="1.png"></li>
+<li>In the terminal, press <code>Ctrl+Shift+V</code> and press enter.
+<img src="https://lneeweb.duckdns.org/images/6.png" alt="1.png"></li>
+<li>Wait for that to finish.
+<img src="https://lneeweb.duckdns.org/images/7.png" alt="1.png"></li>
+<li>In a new tab open https://<code>your_ip</code>:443/
+<img src="https://lneeweb.duckdns.org/images/8.png" alt="1.png"></li>
+<li>Click on sessions. And in the sub bar click on sessions.
+<img src="https://lneeweb.duckdns.org/images/9.png" alt="1.png"></li>
+<li>You should see the running session. Click on the edit button of that session and the snapshot  button. Click create snapshot and your done.</li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

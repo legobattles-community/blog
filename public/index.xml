@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jun 2024 09:22:57 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How a three player battle works</title>
+      <link>http://localhost:1313/posts/threeplayer/</link>
+      <pubDate>Mon, 03 Jun 2024 09:22:57 -0400</pubDate>
+      <guid>http://localhost:1313/posts/threeplayer/</guid>
+      <description>&lt;h2 id=&#34;how-a-three-player-battle-works&#34;&gt;How a three player battle works&lt;/h2&gt;&#xA;&lt;p&gt;Because it does not work with the LAN patch.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-works&#34;&gt;What works&lt;/h3&gt;&#xA;&lt;p&gt;Melonds same computer multiplayer works with three player.&#xA;But how does one get that working with a container environment?&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-qt-build-in-vnc-server&#34;&gt;The QT build in VNC server&lt;/h3&gt;&#xA;&lt;p&gt;QT the toolkit Melonds uses has this cool feature where you can set how is displays called platform plugins.&#xA;There is a platform plugin for VNC.&#xA;VNC is a protocol KASM supports.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prolblems with the online solution</title>
+      <link>http://localhost:1313/posts/musings/</link>
+      <pubDate>Sat, 01 Jun 2024 08:49:50 -0400</pubDate>
+      <guid>http://localhost:1313/posts/musings/</guid>
+      <description>&lt;p&gt;So the frame rate is very bad. In the container we don&amp;rsquo;t have a gpu so the rendering is done by software which can be slow.&#xA;I have also tried to mount bind dev in the container but that does not work.&#xA;Also qt has vnc built in and the melonds snap works with it but no gpu.&#xA;I have not figured out how to get melonds to not crash with &lt;a href=&#34;https://github.com/uwerat/vnc-eglfs&#34;&gt;vnc-eglfs&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Setup Lego Battles Online</title>
+      <link>http://localhost:1313/posts/setuplegobattlesoneline/</link>
+      <pubDate>Thu, 30 May 2024 14:37:53 -0400</pubDate>
+      <guid>http://localhost:1313/posts/setuplegobattlesoneline/</guid>
+      <description>&lt;p&gt;Hello I&amp;rsquo;m lnee I have been doing some cursed stuff in with Linux, web hosting, and in this case Lego battles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A computer with Ubuntu server install on it.&lt;/li&gt;&#xA;&lt;li&gt;Docker to be installed on that server.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;note-i-use-the-docker-deb-not-the-snap-i-have-not-tested-if-the-snap-work&#34;&gt;      &lt;em&gt;Note I use the docker deb not the snap I have not tested if the snap work&lt;/em&gt;&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Access to your router console and the ability to forward port 443&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;step-1-install-kasm-docker&#34;&gt;Step 1 install Kasm docker&lt;/h2&gt;&#xA;&lt;p&gt;Kasm docker is a package of Kasm web that makes think so much easier. &lt;a href=&#34;https://github.com/linuxserver/docker-kasm&#34;&gt;Kasm docker GitHub page&lt;/a&gt; You can find more info there about setup.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
